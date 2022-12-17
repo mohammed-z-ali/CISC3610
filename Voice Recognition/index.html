@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Voice Recognition</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <div id="circle"></div>
+        <button id="btn">Speak</button>
+        <p id="instructions">
+            Say "color _____" to change the color of the circle.<br>
+            Say "size _____" to change the size of the circle.<br>
+            If someone says something larger than 300 (or whatever looks too big on the screen) speak back "Size size limit
+            300".<br>
+            If someone says something smaller than 1, say "Size too small, the minimize size is 1".<br>
+            
+        </p>
+
+        <script type="text/javascript" src="js.js"></script>
+
+    </body>
+
+</html>

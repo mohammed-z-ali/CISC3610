@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="form-container">
+        <div id="form-heading">Text Form</div>
+        <div id="form-content">
+            <div id="name-container">
+                <label for="name-input" id="name-label">Your name: </label>
+                <input type="text" id="name-input">
+            </div>
+
+            <div id="color-container">
+                <label for="background-color-input" id="color-label">Background Color: </label>
+                <input type="color" id="background-color-input"><br>
+                <label for="text-color-input" id="color-label">Text Color: </label>
+                <input type="color" id="text-color-input">
+            </div>
+
+            <div id="font-container">
+                <label for="font-input" id="font-label">Font: </label>
+                <input type="radio" name="font-input" value="Arial">Arial
+                <input type="radio" name="font-input" value="Times New Roman">Times New Roman
+                <input type="radio" name="font-input" value="Helvetica">Helvetica
+            </div>
+
+            <div id="size-container">
+                <label for="size-input" id="size-label">Size: </label>
+                <input type="range" min="12" max="48" value="12" id="size-input">
+            </div>
+
+            <div id="display-container">
+                <div id="display"></div>
+            </div>
+
+            <div>
+                <input type="reset" id="reset-button" value="Reset">
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js.js"></script>
+</body>
+
+</html>
