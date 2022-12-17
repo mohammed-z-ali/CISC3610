@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        
+        var canWidth = 650;
+        var canHeight = 300;
+
+        // the position where the frame will be drawn.
+        var x = 0;
+        var y = 0;
+
+        //the coordinate of the page.
+        var srcX;
+        var srcY;
+
+        // the size of the actual image.
+        var sheetWidth = 1105;
+        var sheetHeight = 308;
+
+        var cols = 5;
+        var rows = 2;
+
+        var widht = sheetWidth / cols;
+        var height = sheetHeight / rows;
+
+
+        var currFrame = 0;
+
+        var image = new Image();
+        image.src = "image.png";
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.widht = canWidth;
+        canvas.height = canHeight;
+
+        function updateFrame() {
+            currFrame = ++currFrame % cols; // 5 % 5 = 1
+            srcX = currFrame * widht;
+            srcY = 0;
+
+            ctx.clearRect(x, y, widht, height);
+        }
+
+        function drawImage(){
+            updateFrame();
+            ctx.drawImage(image, srcX, srcY, widht, height, x, y, widht, height);
+        }
+
+        setInterval(function(){
+            drawImage();
+        }, 100);
+
+
+    </script>
+</body>
+</html>
